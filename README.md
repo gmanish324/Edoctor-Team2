@@ -103,10 +103,13 @@ The **Outpatient Doctor Appointment System** is a web application designed to st
 ## Screenshots
 
 ### Dashboard
-![Dashboard Screenshot](path/to/dashboard-screenshot)
+![Screenshot 2024-10-12 170556](https://github.com/user-attachments/assets/7dafc8a6-f2f6-488c-84b3-e109492ebb3b)
+
 
 ### Admin Dashboard
-![Admin Dashboard Screenshot](path/to/admin-dashboard-screenshot)
+![Screenshot 2024-10-12 170617](https://github.com/user-attachments/assets/fde49ce5-69e2-4d7f-b5ab-6741d87d81b0)
+
+
 
 ## Testing
 - JUnit and Mockito are used for backend unit testing.
