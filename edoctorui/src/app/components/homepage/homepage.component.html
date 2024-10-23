@@ -1,0 +1,49 @@
+<div class="content">
+  <div class="header" id="header">
+    <div class="nav">
+      <label></label>
+      <div class="switchs">
+        <button class="log" id="log" routerLink=''><i class="fa fa-home"></i> Home</button>
+        <button class="log" id="log" onclick="location.href='#services';"><i class="fa fa-cog"></i> Services</button>
+        <button class="log" id="log" (click)="navigate()"><i class="fa fa-sign-in"></i> Login</button>
+        <button class="log" id="log" (click)="navigateToDoc()"><i class="fa fa-sign-in"></i> Doctor Registration</button>
+        <button class="create_acc" id="create_acc" (click)="navigateToUserRegister()"><i class="fa fa-user-plus"></i>User Registration</button>
+      </div>
+    </div>
+    <div class="main">
+      <div class="text">
+        <h1 style="margin-left: -5%; ">HealthCare Management System</h1><br>
+        <h5 style="margin-left: 10%; color: rgb(248, 247, 247);"></h5><br><br>
+      </div><br>
+      <img class="floating" id="img3" [src]="'welcome-logo.png'">
+    </div>
+  </div>
+  <br>
+</div>
+<br><br>
+<marquee class="marquee" direction="left"><i class="fa fa-bell"></i> If Already our Customer, please Login to see your
+  Hospital Reports, else Register to book the appointment</marquee>
+<div class="details">
+  <div class="detail_1" style="background-color: rgb(248, 248, 246); margin-right: 5%;">
+    <h2
+      style="font-weight: bolder; font-size: 35px;font-family: aladin;align-items: center; margin-top: 5%; color: rgb(7, 46, 49);">
+      Doctor name</h2>
+    <div class="circle" style="border-radius: 50%; background-color: white; padding: 10%;">
+      <img [src]="'admin.png'" width="130" height="130" id="img">
+    </div>
+    <p class="card-text">Name: <br>
+      Experience: <br>
+      Specialization: <br>
+    </p>
+    <a href="" class="btn btn-primary" id="btn">Book appointment</a>
+  </div>
+
+
+  <!-- <div class="detail_2" (click)="navigate()" style="background-color: rgb(238, 236, 138); margin-right: 5%;">
+    <h2 style="font-weight: bolder; font-size: 35px;font-family: aladin; margin-top: 5%; color: rgb(7, 46, 49);"> Doctor
+      Login </h2>
+    <div class="circle" style="border-radius: 50%; background-color: white; padding: 10%;">
+      <img [src]="'doctor.png'" width="130" height="130">
+    </div>
+  </div> -->
+  

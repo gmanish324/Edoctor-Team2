@@ -4,14 +4,19 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common';
+import { HomepageComponent } from './components/homepage/homepage.component';
+import { bootstrapApplication } from '@angular/platform-browser';
+import { DoctorRegistrationComponent } from './components/doc-register/doc-register.component';
 @NgModule({
-  declarations: [AppComponent,LoginComponent,RegisterComponent],
+  declarations: [],
   imports: [
+    AppComponent,LoginComponent,RegisterComponent,HomepageComponent,DoctorRegistrationComponent,
     BrowserModule,
-    RouterModule
-    
+    RouterModule,
+    CommonModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  // bootstrapApplication: [AppComponent]
 })
 export class AppModule { }
