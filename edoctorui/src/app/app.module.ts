@@ -14,7 +14,7 @@ import { DoctorRegistrationComponent } from './components/doc-register/doc-regis
     AppComponent,LoginComponent,RegisterComponent,HomepageComponent,DoctorRegistrationComponent,
     BrowserModule,
     RouterModule,
-    CommonModule
+    CommonModule,
   ],
   providers: [],
   // bootstrapApplication: [AppComponent]
