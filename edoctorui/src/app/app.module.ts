@@ -8,6 +8,7 @@ import { CommonModule } from '@angular/common';
 import { HomepageComponent } from './components/homepage/homepage.component';
 import { bootstrapApplication } from '@angular/platform-browser';
 import { DoctorRegistrationComponent } from './components/doc-register/doc-register.component';
+import { ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [],
   imports: [
@@ -15,6 +16,7 @@ import { DoctorRegistrationComponent } from './components/doc-register/doc-regis
     BrowserModule,
     RouterModule,
     CommonModule,
+    ReactiveFormsModule
   ],
   providers: [],
   // bootstrapApplication: [AppComponent]
