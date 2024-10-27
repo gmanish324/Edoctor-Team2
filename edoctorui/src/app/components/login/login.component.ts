@@ -26,7 +26,6 @@ export class LoginComponent {
   });
   submitted = false;
   constructor(private formBuilder: FormBuilder) {}
-
   ngOnInit(): void {
     this.form = this.formBuilder.group(
       {

@@ -13,7 +13,7 @@ export class HomepageComponent {
 
   ngOnInit(): void 
   {
-    
+  
   }
   navigateToDoc(){
   this._router.navigate(['/doc-register'])

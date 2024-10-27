@@ -46,7 +46,6 @@ export class RegisterComponent {
         contact:['',Validators.required],
         role:['',Validators.required]
       }
-      
     );
   }
 
@@ -62,7 +61,6 @@ export class RegisterComponent {
     if (this.form.invalid) {
       return;
     }
-
     console.log(JSON.stringify(this.form.value, null, 2));
   }
 }

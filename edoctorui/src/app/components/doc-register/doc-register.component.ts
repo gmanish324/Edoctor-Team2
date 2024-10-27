@@ -53,11 +53,9 @@ export class DoctorRegistrationComponent {
       
     );
   }
-
   get f(): { [key: string]: AbstractControl } {
     return this.form.controls;
   }
-
   onSubmit(){
     this.submitted = true;
 

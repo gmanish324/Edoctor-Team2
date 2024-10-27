@@ -3,7 +3,6 @@ import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { HomepageComponent } from './components/homepage/homepage.component';
 import { DoctorRegistrationComponent } from './components/doc-register/doc-register.component';
-// import { UserdashboardComponent } from './userdashboard/userdashboard.component';
 export const routes: Routes = [
   { path: 'homepage', component: HomepageComponent},
   { path: 'login', component: LoginComponent },

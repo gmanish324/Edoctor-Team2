@@ -18,7 +18,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     RouterModule,
     CommonModule,
     ReactiveFormsModule,
-   // Validator
+
   ],
   schemas:[CUSTOM_ELEMENTS_SCHEMA],
   providers: [],
