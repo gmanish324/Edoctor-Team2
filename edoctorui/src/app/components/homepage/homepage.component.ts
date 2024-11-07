@@ -1,9 +1,11 @@
 import { Component ,OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { AuthService } from '../../../services/auth.service';
 @Component({
   selector: 'app-homepage',
   standalone: true,
   imports: [],
+  providers: [AuthService],
   templateUrl: './homepage.component.html',
   styleUrl: './homepage.component.css'
 })

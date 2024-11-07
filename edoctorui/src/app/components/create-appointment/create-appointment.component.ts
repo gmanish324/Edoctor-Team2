@@ -10,20 +10,19 @@ import {
   Validators,
 } from '@angular/forms';
 @Component({
-  selector: 'app-doctor-registration',
+  selector: 'app-create-appointment',
   standalone: true,
   imports: [ReactiveFormsModule,CommonModule],
-  templateUrl: './doc-register.component.html',
-  styleUrl: './doc-register.component.css'
+  templateUrl: './create-appointment.component.html',
+  styleUrl: './create-appointment.component.css'
 })
-export class DoctorRegistrationComponent {
+export class CreateAppointmentComponent {
   form: FormGroup = new FormGroup({
     fullname: new FormControl(''),
-    email: new FormControl(''),
-    password: new FormControl(''),
-    specialization:new FormControl(''),
-    experience:new FormControl(''),
-    place: new FormControl(''),
+    age: new FormControl(''),
+    gender : new FormControl(''),
+    type: new FormControl(''),
+    doctor : new FormControl(''),
   });
   submitted = false;
   constructor(private formBuilder: FormBuilder,private activatedRoute: ActivatedRoute,private _router : Router) { }
@@ -31,18 +30,10 @@ export class DoctorRegistrationComponent {
     this.form = this.formBuilder.group(
       {
         fullname: ['', Validators.required],
-        email:['',Validators.required],
-        password: [
-          '',
-          [
-            Validators.required,
-            Validators.minLength(6),
-            Validators.maxLength(40),
-          ],
-        ],
-        specialization:['',Validators.required],
-        experience:['',Validators.required],
-        place:['',Validators.required],
+        age:['',Validators.required],
+        gender:['',Validators.required],
+        type:['',Validators.required],
+        doctor:['',Validators.required]
       }
       
     );
