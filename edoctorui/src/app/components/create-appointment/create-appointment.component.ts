@@ -21,7 +21,10 @@ export class CreateAppointmentComponent {
     fullname: new FormControl(''),
     age: new FormControl(''),
     gender : new FormControl(''),
-    type: new FormControl(''),
+    Problem: new FormControl(''),
+    case: new FormControl(''),
+    Date: new FormControl(''),
+    Time: new FormControl(''),
     doctor : new FormControl(''),
   });
   submitted = false;
@@ -32,7 +35,10 @@ export class CreateAppointmentComponent {
         fullname: ['', Validators.required],
         age:['',Validators.required],
         gender:['',Validators.required],
-        type:['',Validators.required],
+        Problem: ['',Validators.required],
+        case:['',Validators.required],
+        Date:['',Validators.required],
+        Time: ['', Validators.required],
         doctor:['',Validators.required]
       }
       

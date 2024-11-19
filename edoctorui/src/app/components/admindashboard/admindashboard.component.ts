@@ -20,5 +20,8 @@ export class AdmindashboardComponent {
    logout(){
     this.authService.logout();
   }
+  navigateToDoc(){
+    this._router.navigate(['/doc-register'])
+    }
    }
 

@@ -1,10 +1,10 @@
 <section class="vh-100">
     <div class="container-fluid h-custom">
         <div class="row d-flex justify-content-center align-items-center h-100">
-            <div class="col-md-9 col-lg-6 col-xl-5">
-                <img src="doctor.png" id="img" class="img-fluid" alt="Sample image">
+            <div class="col-md-4 col-lg-4 col-xs-12 justify-content-center">
+                <img src="doctor.png" id="img" class="img-fluid mx-auto d-block" alt="Sample image">
             </div>
-            <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+            <div class="col-md-8 col-lg-8 col-xs-12 ">
                 <form [formGroup]="form" (ngSubmit)="onSubmit()">
                     <div class="d-flex flex-row align-items-center justify-content-center justify-content-lg-start">
                     </div>
@@ -12,8 +12,9 @@
                         <div class="divider d-flex align-items-center my-4">
                             <p class="text-center fw-bold mx-3 mb-0">Book Appointment</p>
                         </div>
-                        <div class="form-group">
-                            <label for="name"><b class="text-danger">*</b>Fullname:</label>
+                        <div class="row form-group">
+                            <div class="col-md-6">
+                                <label for="name"><b class="text-danger">*</b>Fullname:</label> 
                             <input type="text" class="form-control" id="name" name="name"
                                 [ngClass]="{ 'is-invalid': submitted && f['fullname'].errors }"
                                 formControlName="fullname" />
@@ -24,20 +25,6 @@
                                 }
                             </div>
                             }
-                        </div>
-                        <div class="form-group">
-                            <label for="experience"><b class="text-danger">*</b>Age (in years):</label>
-                            <input type="number" class="form-control" id="Age" name="age"
-                                [ngClass]="{ 'is-invalid': submitted && f['age'].errors }" formControlName="age">
-                            @if (submitted && f['age'].errors) {
-                            <div class="invalid-feedback">
-                                @if (f['age'].errors['required']) {
-                                <div>please enter Age</div>
-                                }
-                            </div>
-                            }
-                        </div>
-                        <div class="form-group">
                             <label for="gender"><b class="text-danger">*</b>Gender:</label>
                             <select class="form-control" id="gender" name="gender"
                                 [ngClass]="{ 'is-invalid': submitted && f['gender'].errors }" formControlName="gender">
@@ -53,25 +40,71 @@
                                 }
                             </div>
                             }
-                        </div>
-                        <div class="mb-3">
-                            <label for="type" class="form-label"><b class="text-danger">*</b>Type</label>
+                            <label for="name"><b class="text-danger">*</b>Problem:</label>
+                            <input type="text" class="form-control" id="Problem" name="Problem"
+                                [ngClass]="{ 'is-invalid': submitted && f['Problem'].errors }"
+                                formControlName="Problem" />
+                            @if (submitted && f['Problem'].errors) {
+                            <div class="invalid-feedback">
+                                @if (f['Problem'].errors['required']) {
+                                <div>please enter your Problem</div>
+                                }
+                            </div>
+                            }
+                            
+                            <label for="experience"><b class="text-danger">*</b>Age (in years):</label>
+                            <input type="number" class="form-control" id="Age" name="age"
+                                [ngClass]="{ 'is-invalid': submitted && f['age'].errors }" formControlName="age">
+                            @if (submitted && f['age'].errors) {
+                            <div class="invalid-feedback">
+                                @if (f['age'].errors['required']) {
+                                <div>please enter Age</div>
+                                }
+                            </div>
+                            } 
+                            </div>
+                            <!--  -->
+                            <div class="col-md-6">
+                                <label for="type" class="form-label"> <b class="text-danger">*</b>Time:</label>
+                                <select class="form-control" id="type" name="type"
+                                    [ngClass]="{ 'is-invalid': submitted && f['Time'].errors }" formControlName="Time">
+                                    <option value="" disabled selected>Select Type</option>
+                                    <option value="Student">Morning</option>
+                                    <option value="Employee">Afternoon</option>
+                                    <option value="Freelancer">Evening</option>
+                                </select>
+                                @if (submitted && f['Time'].errors) {
+                                <div class="invalid-feedback">
+                                    @if (f['Time'].errors['required']) {
+                                    <div> please select time slot</div>
+                                    }
+                                </div>
+                                }
+                            <label for="type" class="form-label"><b class="text-danger">*</b>Case:</label>
                             <select class="form-control" id="type" name="type"
-                                [ngClass]="{ 'is-invalid': submitted && f['type'].errors }" formControlName="type">
+                                [ngClass]="{ 'is-invalid': submitted && f['case'].errors }" formControlName="case">
                                 <option value="" disabled selected>Select Type</option>
-                                <option value="Student">Checkup</option>
+                                <option value="Student">General checkup</option>
                                 <option value="Employee">Emergency</option>
                                 <option value="Other">Other</option>
-                                @if (submitted && f['type'].errors) {
+                                @if (submitted && f['case'].errors) {
                                 <div class="invalid-feedback">
-                                    @if (f['type'].errors['required']) {
+                                    @if (f['case'].errors['required']) {
                                     <div>Please select type</div>
                                     }
                                 </div>
                                 }
                             </select>
-                        </div>
-                        <div class="mb-3">
+                            <label for="date"><b class="text-danger">*</b>Date :</label>
+                            <input type="date" class="form-control" id="date" name="date"
+                                [ngClass]="{ 'is-invalid': submitted && f['Date'].errors }" formControlName="Date">
+                            @if (submitted && f['Date'].errors) {
+                            <div class="invalid-feedback">
+                                @if (f['Date'].errors['required']) {
+                                <div>please select date</div>
+                                }
+                            </div>
+                            }
                             <label for="type" class="form-label"> <b class="text-danger">*</b>Doctor Name</label>
                             <select class="form-control" id="type" name="type"
                                 [ngClass]="{ 'is-invalid': submitted && f['doctor'].errors }" formControlName="doctor">
@@ -88,8 +121,11 @@
                                 }
                             </div>
                             }
+                            </div>
                         </div>
-                        <button type="submit" id="btn" class="btn btn-primary btn-block">Book</button>
+                        <div class="justify-content-center">
+                        <button type="submit" id="btn" class="btn btn-primary btn-block mx-auto d-block">Book</button>
+                    </div>
                     </div>
                 </form>
             </div>

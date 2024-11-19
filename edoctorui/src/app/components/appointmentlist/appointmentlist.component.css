@@ -87,3 +87,34 @@
     cursor: pointer;
     outline: none;
 }
+
+/* th{
+   text-align: center; 
+} */
+thead{
+    background-color: #b7f0f1;
+  }
+  table, td{
+    text-align: center;
+    align-items: center;
+    vertical-align: middle;
+  }
+  table, td, tr{
+    border: 1px solid rgb(163, 161, 161);
+    font-family: serif;
+    font-weight: bold;
+    font-style: normal;
+    font-size: large;
+  }
+  
+  th{
+    text-transform: uppercase;
+    color: rgb(12, 0, 0);
+    font-family: Helvetica;
+    font-style: italic;
+    font-size: normal;
+    text-align: center; 
+  }
+  td{
+    text-transform:none;
+  }
